@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 function Header() {
-  const wishlist = useSelector((state)=>state.wishlistReducer.wishlist)
+  const wishlist = useSelector((state)=>state.wishlistReducer)
   const cart = useSelector((state)=>state.cartReducer)
   return (
     <nav style={{zIndex:'1'}} className="navbar navbar-expand-lg navbar-light bg-primary top-0 position-fixed w-100">
@@ -17,14 +17,14 @@ function Header() {
                       <Link to={'/wishlist'} className="btn btn-outline-light d-flex align-items-center" type="submit">
                           <i className="fa-solid fa-heart text-danger me-1"></i>
                           Wishlist
-                          <span className="badge bg-light text-dark ms-1 rounded-pill">{wishlist.length}</span>
+                          <span className="badge bg-light text-dark ms-1 rounded-pill">{wishlist?.length}</span>
                       </Link>
                     </li>
                     <li className='nav-item'>
                       <Link to={'/cart'} className="btn btn-outline-light ms-4 d-flex align-items-center" type="submit">
                       <i class="fa-solid fa-cart-plus me-1"></i>
                           Cart
-                          <span className="badge bg-light text-dark ms-1 rounded-pill">{cart.length}</span>
+                          <span className="badge bg-light text-dark ms-1 rounded-pill">{cart?.length}</span>
                       </Link>
                     </li>
                 </ul>
