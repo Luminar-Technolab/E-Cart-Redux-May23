@@ -95,8 +95,7 @@
                         - useDispatch : To dispatch action in redux
                         - useSelector : To access state from store in redux
                     - custom Hooks : When you have component logic that needs to be used by multiple components, we can extract that logic to a custom Hook.
-                        -   start with "use" keyword
-                        
+                        -   start with "use" keyword                        
             - Difference between Functional and class based Component
                     Functional component                                Class based component
                  -------------------------------------           -------------------------------------
